@@ -1,0 +1,144 @@
+@import '../var.css';
+
+#contact-section {
+    padding: 64px 32px;
+    background-color: #F7F8F9;
+}
+
+.contact-header {
+    margin-bottom: 16px;
+}
+
+.contact-p {
+    margin-bottom: 8px;
+}
+
+.contact-ul {
+    list-style-type: none;
+    border-left: 3px solid black;
+    padding-left: 16px;
+    z-index: 3;
+}
+
+.contact-ul li {
+    margin: 8px 0;
+    position: relative;
+    clip-path: inset(0 100% 0 0);
+}
+
+.contact-ul-li-animated {
+    animation: reveal 0.5s forwards calc(var(--n) * 0.2s);
+}
+
+.contact-chalizard {
+    display: none;
+}
+
+
+.contact-or {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 32px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    row-gap: 32px;
+    border-radius: 10px;
+    transform: translateX(20px);
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form-animated {
+    animation: slideHorizontal 0.5s forwards;
+}
+
+.contact-form input {
+    padding: 8px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    padding: 8px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-form button:hover {
+    border-radius: 0;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+@keyframes blurIn {
+    to {
+        filter: grayscale(1) blur(0);
+    }
+}
+
+.blurInAnimation {
+    animation: blurIn 0.5s forwards;
+}
+
+@media (min-width:1100px) and (max-width:1599px) {
+    #contact-section {
+        padding: 64px 128px;
+        background-color: #F7F8F9;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-form {
+        width: 400px;
+        margin: 0;
+    }
+
+    .contact-chalizard {
+        width: 300px;
+        aspect-ratio: 1;
+        background-image: url("https://sg.portal-pokemon.com/play/resources/pokedex/img/pm/ca3db4aad5c85a525d9be86852b26db1db7a22c0.png");
+        background-position: center;
+        background-size: cover;
+        display: block;
+        filter: grayscale(1) blur(100px);
+    }
+
+
+}
+
+@media (min-width:1100px) {
+    #contact-section {
+        padding: var(--desktop-padding);
+        background-color: #F7F8F9;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-form {
+        width: 400px;
+        margin: 0;
+    }
+
+    .contact-chalizard {
+        width: 300px;
+        aspect-ratio: 1;
+        background-image: url("https://sg.portal-pokemon.com/play/resources/pokedex/img/pm/ca3db4aad5c85a525d9be86852b26db1db7a22c0.png");
+        background-position: center;
+        background-size: cover;
+        display: block;
+        filter: grayscale(1) blur(100px);
+    }
+
+
+}

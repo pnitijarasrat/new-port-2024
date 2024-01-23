@@ -1,0 +1,150 @@
+#nav-section {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    z-index: 97;
+    background-color: white;
+}
+
+.nav-backdrop {
+    width: 500vw;
+    height: 500vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    z-index: 99;
+}
+
+.nav-ul-mobile {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    position: fixed;
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    z-index: 100;
+}
+
+.nav-ul-li {
+    margin: 16px 0;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 16px;
+}
+
+.nav-ul-li:hover {
+    cursor: pointer;
+}
+
+.nav-ul-li img {
+    width: 25px;
+}
+
+.nav-ul-mobile-in-animated {
+    animation: navIn 0.1s forwards
+}
+
+.nav-ul-mobile-out-animated {
+    animation: navOut 0.1s forwards
+}
+
+@keyframes navIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes navOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.nav-ul-desktop {
+    display: none;
+}
+
+.nav-button {
+    border: none;
+    background-color: transparent;
+}
+
+.nav-button img {
+    width: 25px;
+}
+
+@keyframes navHide {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes navUnHide {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.nav-hide {
+    animation: navHide 0.1s forwards;
+}
+
+.nav-unhide {
+    animation: navUnHide 0.1s forwards;
+}
+
+@media (min-width: 1100px) {
+
+    #nav-section {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 48px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        z-index: 97;
+        background-color: white;
+    }
+
+    .nav-ul-mobile,
+    .nav-button {
+        display: none;
+    }
+
+    .nav-ul-desktop {
+        display: block;
+        display: flex;
+        list-style-type: none;
+    }
+
+    .nav-ul-desktop .nav-ul-li {
+        text-align: center;
+        margin: 0 16px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

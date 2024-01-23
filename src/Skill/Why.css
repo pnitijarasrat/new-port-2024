@@ -1,0 +1,102 @@
+@import '../var.css';
+
+#why-section {
+    padding: 64px 32px;
+    background-color: #6A6A6A;
+    color: white;
+}
+
+.why-card {
+    margin: 32px 0;
+    position: relative;
+}
+
+.why-card::before {
+    content: '';
+    background-color: #6A6A6A;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    z-index: 2;
+}
+
+.why-card-header {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.why-card-p {
+    text-indent: 20px;
+    transform: translateX(-100%);
+}
+
+.why-card-p-animated {
+    animation: slideHorizontal 0.5s forwards 0.2s;
+}
+
+@keyframes slideHorizontal {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.why-outro {
+    text-indent: 20px;
+    position: relative;
+    font-weight: bold;
+    font-style: italic;
+    clip-path: inset(0 100% 0 0);
+}
+
+.why-outro-animated {
+    animation: reveal 0.5s forwards 0.2s;
+}
+
+@keyframes reveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1599px) {
+    #why-section {
+        padding: 64px 128px 128px;
+        background-color: #6A6A6A;
+        color: white;
+    }
+
+    .why-outro {
+        text-indent: 20px;
+        position: relative;
+        font-weight: bold;
+        font-style: italic;
+        clip-path: inset(0 100% 0 0);
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    #why-section {
+        padding: var(--desktop-padding);
+        padding-bottom: 192px;
+        background-color: #6A6A6A;
+        color: white;
+    }
+
+    .why-outro {
+        text-indent: 20px;
+        position: relative;
+        font-weight: bold;
+        font-style: italic;
+        clip-path: inset(0 100% 0 0);
+        width: 100%;
+        text-align: center;
+    }
+}

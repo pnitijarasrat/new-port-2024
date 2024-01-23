@@ -1,0 +1,142 @@
+@import '../var.css';
+
+#skill-section {
+    padding: 64px 32px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.skill-background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(8px) grayscale(1);
+    z-index: -1;
+}
+
+.skill-p {
+    margin: 16px 0;
+    text-indent: 20px;
+}
+
+.skill-follow {
+    margin: 16px 0;
+}
+
+.skill-list {
+    margin: 16px 0;
+    display: flex;
+    column-gap: 32px;
+}
+
+.skill-list-ul {
+    list-style-type: none;
+    border-left: 2px solid white;
+    padding-left: 16px;
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.skill-list-li {
+    margin: 8px 0;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.skill-list-ul-animated {
+    animation: slideHorizontal 0.5s forwards;
+}
+
+.skill-list-li-animated {
+    animation: slideVertical 0.5s forwards calc(var(--n) * 0.2s)
+}
+
+@keyframes slideVertical {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideHorizontal {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skill-list-header {
+    font-weight: bold;
+}
+
+.skill-outro {
+    text-indent: 20px;
+}
+
+.skill-quote {
+    margin-top: 48px;
+    position: relative;
+}
+
+.skill-quote::before {
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    content: '';
+    z-index: 2;
+}
+
+.skill-quote-header {
+    transform: translateX(-100%);
+}
+
+.skill-quote-header-animated {
+    animation: slideHorizontal 0.5s forwards 0.2s
+}
+
+@media (min-width: 1000px) and (max-width: 1599px) {
+    #skill-section {
+        padding: 64px 128px 128px;
+    }
+
+    .skill-list-container {
+        display: flex;
+        column-gap: 128px;
+    }
+
+    .skill-quote-header {
+        transform: translateX(-100%);
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1600px) {
+    #skill-section {
+        padding: var(--desktop-padding);
+        padding-bottom: 192px;
+    }
+
+    .skill-list-container {
+        display: flex;
+        column-gap: 128px;
+    }
+
+    .skill-quote-header {
+        transform: translateX(-100%);
+        text-align: center;
+        width: 100%;
+    }
+}
