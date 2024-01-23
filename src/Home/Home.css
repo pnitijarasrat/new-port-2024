@@ -74,6 +74,7 @@
 
 .hero-button button:hover {
     border-radius: 0;
+    cursor: pointer;
 }
 
 .hero-scroll {

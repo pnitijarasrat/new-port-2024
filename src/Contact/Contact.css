@@ -73,12 +73,13 @@
     width: 100%;
     border: none;
     border-radius: 10px;
+    transition: 0.5s ease;
+
 }
 
 .contact-form button:hover {
     border-radius: 0;
     cursor: pointer;
-    transition: 0.5s ease;
 }
 
 @keyframes blurIn {
