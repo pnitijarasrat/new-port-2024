@@ -82,7 +82,7 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1600px) {
     #why-section {
         padding: var(--desktop-padding);
         padding-bottom: 192px;

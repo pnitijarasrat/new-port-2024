@@ -117,7 +117,7 @@
 
 }
 
-@media (min-width:1100px) {
+@media (min-width:1600px) {
     #contact-section {
         padding: var(--desktop-padding);
         background-color: #F7F8F9;
