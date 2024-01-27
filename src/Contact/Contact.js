@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { CiLink } from "react-icons/ci";
 import './Contact.css'
 import { useInView } from "framer-motion";
 import emailjs from '@emailjs/browser';
@@ -68,15 +69,20 @@ export default function Contact() {
                     <li style={{ '--n': 1 }}>080-429-2884</li>
                     <li style={{ '--n': 2 }} >
                         <a href="https://www.linkedin.com/in/p-nitijarasrat/" target="_blank" rel="noreferrer">
-                            Linkedin
+                            Linkedin <CiLink />
                         </a>
                     </li>
                     <li style={{ '--n': 3 }}>
-                        <a href="https://www.instagram.com/qwertyadgsfhzxcvb/" target="_blank" rel="noreferrer">
-                            Instagram
+                        <a href="https://github.com/pnitijarasrat" target="_blank" rel="noreferrer">
+                            Instagram <CiLink />
                         </a>
                     </li>
-                    <li style={{ '--n': 4 }} ref={ref}>puriwatds@gmail.com</li>
+                    <li style={{ '--n': 4 }}>
+                        <a href="https://www.instagram.com/qwertyadgsfhzxcvb/" target="_blank" rel="noreferrer">
+                            Github <CiLink />
+                        </a>
+                    </li>
+                    <li style={{ '--n': 5 }} ref={ref}>puriwatds@gmail.com</li>
                 </ul>
                 <div className="contact-chalizard" />
             </div>
